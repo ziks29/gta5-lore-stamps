@@ -4,7 +4,7 @@
 They are pure SVG, you can recolour them, and each one has wear that can be randomised.
 Made for FiveM / RedM NUI, MDT and document scripts, and for web panels.
 
-**[Live demo](https://ziks29.github.io/gta5-lore-stamps/)**: change the ink colour, switch the wear off, or re-stamp with random wear.
+**[Live demo](https://ushpuras.dev/gta5-lore-stamps/)**: change the ink colour, switch the wear off, or re-stamp with random wear.
 
 ![All 11 stamps](docs/preview.png)
 
