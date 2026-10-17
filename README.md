@@ -116,17 +116,29 @@ Wear options:
 
 ## FiveM resource (`fivem/ziks-stamps`)
 
-![NUI gallery](docs/nui.png)
+With pure Lua exports you can stamp a document, save the stamp (oxmysql or KVP) and show it on screen. No NUI code is needed in your own script.
 
 ```lua
--- server: create stamp data; date, officer and badge are filled from the framework
-local stamp = exports['ziks-stamps']:CreateStamp(source, 'evidence', { fields = { case = 'LS-24-0815' } })
--- save `stamp` with your document, then send it to your NUI:
+-- server
+exports['ziks-stamps']:Stamp(source, 'report:1042', '00-lspd')
+exports['ziks-stamps']:Stamp(source, 'report:1042', 'evidence', { fields = { case = 'LS-24-0815' } })
+exports['ziks-stamps']:ShowDocument(source, 'report:1042', { title = 'ARREST REPORT · LSPD', lines = { 'Suspect: Franklin Clinton' } })
 ```
-```js
-renderStamp(slot, { url: 'https://cfx-nui-ziks-stamps/html/' + stamp.file,
-                    seed: stamp.seed, ink: stamp.ink, fields: stamp.fields });
+```lua
+-- client: quick stamp flash in a corner
+exports['ziks-stamps']:ShowStamp('approved', { position = 'bottom-right', duration = 2500 })
 ```
+
+![Document viewer](docs/viewer.png)
+
+Exports:
+- **Server:** `Stamp`, `GetDocumentStamps`, `RemoveStamps`, `ShowDocument`, `CreateStamp`, `GetOfficer`, `GetDate`, `GetStamps`.
+- **Client:** `ShowStamps`, `ShowStamp`, `HideStamps`, `GetGameDate`, `GetStampUrl`.
+
+The date, officer and badge come from qbx / qb / esx; on other servers the FiveM player name is used.
+The date can come from the real clock or the in-game clock (`Config.DateSource = 'ingame'`).
+
+![NUI gallery](docs/nui.png)
 
 Install: copy `fivem/ziks-stamps` into `resources`, then add `ensure ziks-stamps` to `server.cfg`. In game, `/stamps` opens the gallery.
 There is also a ready zip on the [Releases](https://github.com/ziks29/gta5-lore-stamps/releases) page.

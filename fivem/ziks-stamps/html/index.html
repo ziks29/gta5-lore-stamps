@@ -41,6 +41,20 @@ input[type=color]{width:34px;height:28px;border:1px solid #2a2a2f;border-radius:
 .meta{font-size:11px;color:#71717a;word-break:break-all}
 .sp{flex:1}
 kbd{background:#16161a;border:1px solid #2a2a2f;border-radius:4px;padding:0 4px;font-size:11px}
+/* viewer: ShowStamp / ShowStamps / ShowDocument */
+#view{position:fixed;inset:0;display:none;pointer-events:none}
+#view.on{display:block}
+#view.focus{pointer-events:auto;background:#0007}
+#view .solo{position:absolute;display:flex;gap:2vh;mix-blend-mode:normal}
+#view .solo>div{width:var(--sz);filter:drop-shadow(0 2px 6px #0006)}
+#view .pos-center{left:50%;top:50%;transform:translate(-50%,-50%)}
+#view .pos-top-right{right:4vh;top:4vh}#view .pos-top-left{left:4vh;top:4vh}
+#view .pos-bottom-right{right:4vh;bottom:4vh}#view .pos-bottom-left{left:4vh;bottom:4vh}
+#view .doc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:88vh;aspect-ratio:1/1.32;background:#f4efe3;border-radius:4px;box-shadow:0 12px 50px #000c;color:#3a352a;padding:6vh 6.5vh;overflow:hidden}
+#view .doc h2{font:700 2.4vh/1.2 Georgia,serif;letter-spacing:.12em;text-align:center;margin-bottom:3.5vh}
+#view .doc p{font:2vh/1.55 Georgia,serif;border-bottom:1px solid #c9c1ae;padding:.6vh 0;min-height:3.6vh}
+#view .doc .st{position:absolute;mix-blend-mode:multiply;opacity:.92}
+#view .x{position:absolute;right:2vh;top:2vh;pointer-events:auto;padding:8px 14px;border-radius:10px;border:1px solid #2a2a2f;background:#111113;color:#e8e8ea;font:600 13px system-ui;cursor:pointer}
 </style></head><body>
 <div id="app"><div class="win">
   <div class="col list">
@@ -63,6 +77,7 @@ kbd{background:#16161a;border:1px solid #2a2a2f;border-radius:4px;padding:0 4px;
     <button class="btn g" id="close">Close <kbd>Esc</kbd></button>
   </div>
 </div></div>
+<div id="view"></div>
 <script src="stamp-wear.js"></script>
 <script src="app.js"></script>
 </body></html>
