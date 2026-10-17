@@ -1,9 +1,9 @@
 # GTA V Lore Stamps
 
 Free lore-friendly rubber stamps and seals for Grand Theft Auto V roleplay documents:
-- **28 department and business seals**
+- **31 department and business seals**
 - **15 status stamps** with live date and officer fields
-- **28 mini stamps** that stay readable below 100 px
+- **31 mini stamps** that stay readable below 100 px
 - **a ready FiveM resource** (`ziks-stamps`)
 
 Everything is pure SVG: recolour it with one CSS variable and give it random rubber-stamp wear.
@@ -17,23 +17,29 @@ Everything is pure SVG: recolour it with one CSS variable and give it random rub
 ### Seals: `svg/`
 | # | Stamp | # | Stamp |
 |---|---|---|---|
-| 00 | LSPD (City of Los Santos seal) | 14 | IAA |
-| 01 | N.O.O.S.E. | 15 | LS Fire Department |
-| 02 | Los Santos EMS | 16 | SA Park Ranger |
-| 03 | Superior Court (County seal) | 17 | Port Authority of Los Santos |
-| 04 | Department of Justice | 18 | LS Department of Water & Power |
-| 05 | Office of the Governor | 19 | National Coast Guard |
-| 06 | Notary Public | 20 | Bolingbroke / SA State Prison Authority |
-| 07 | Dynasty 8 Real Estate | 21 | San Andreas DMV |
-| 08 | Maze Bank | 22 | Los Santos Transit |
-| 09 | Fleeca Bank | 23 | Los Santos Customs |
-| 10 | Pacific Standard | 24 | Union Depository |
-| 11 | LS County Sheriff | 25 | Pillbox Hill Medical Center |
-| 12 | SA Highway Patrol | 26 | Weazel News |
-| 13 | FIB | 27 | Lifeinvader |
+| 00 | LSPD (City of Los Santos seal) | 16 | SA Park Ranger |
+| 01 | N.O.O.S.E. | 17 | Port Authority of Los Santos |
+| 02 | Los Santos EMS | 18 | LS Department of Water & Power |
+| 03 | Superior Court (County seal) | 19 | National Coast Guard |
+| 04 | Department of Justice | 20 | Bolingbroke / SA State Prison Authority |
+| 05 | Office of the Governor | 21 | San Andreas DMV |
+| 06 | Notary Public | 22 | Los Santos Transit |
+| 07 | Dynasty 8 Real Estate | 23 | Los Santos Customs |
+| 08 | Maze Bank | 24 | Union Depository |
+| 09 | Fleeca Bank | 25 | Pillbox Hill Medical Center |
+| 10 | Pacific Standard | 26 | Weazel News |
+| 11 | LSSD · LS County Sheriff | 27 | Lifeinvader |
+| 12 | SA Highway Patrol | 28 | BCSO · Blaine County Sheriff |
+| 13 | FIB | 29 | Gruppe Sechs |
+| 14 | IAA | 30 | Bobcat Security |
+| 15 | LS Fire Department | | |
 
 The emblems are taken from the actual in-game seals and logos. The mottos are lore too:
-"Obey & Survive", "Amor Patria", "The State You're In" and "Confirming Your Prejudices".
+"Obey & Survive", "Amor Patria", "The State You're In", "The Morning Glory County" and "Confirming Your Prejudices".
+
+New in v1.3: **LSSD** (traced from the in-game badge), **BCSO** (Seal of Blaine County), **Gruppe Sechs** and **Bobcat Security**.
+
+![New in v1.3](docs/new-v1.3.png)
 
 ### Status stamps: `svg/status/`
 APPROVED · DENIED · PAID · VOID · COPY · RECEIVED · CONFIDENTIAL · TOP SECRET · EVIDENCE · CASE CLOSED ·

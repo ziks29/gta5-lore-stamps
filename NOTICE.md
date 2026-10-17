@@ -4,7 +4,7 @@
 The MIT license in `LICENSE` covers ziks's own work in this repository:
 - the stamp layouts, ring lettering, borders and bead rings;
 - the status and mini stamp designs;
-- the redrawn emblems: Star of Life, scales of justice, the quartered city shield, the Pacific Standard shield, the sheriff, highway patrol and ranger badges, the Coast Guard anchor, and the Weazel News mark;
+- the redrawn emblems: Star of Life, scales of justice, the quartered city shield, the Pacific Standard shield, the highway patrol and ranger badges, the Coast Guard anchor, and the Weazel News mark;
 - `stamp-wear.js`, the FiveM resource `ziks-stamps`, the demo page and the documentation.
 
 ## Grand Theft Auto V material
@@ -16,7 +16,8 @@ Several emblems are traced from, or based on, logos and seals that appear in Gra
 - SA State Prison Authority, San Andreas DMV and Los Santos Transit;
 - Dynasty 8, Maze Bank, Fleeca and Pacific Standard;
 - Los Santos Customs, Union Depository and Pillbox Hill Medical Center;
-- Weazel News and Lifeinvader.
+- Weazel News and Lifeinvader;
+- the LSSD badge, the Seal of Blaine County, Gruppe Sechs and Bobcat Security.
 
 Grand Theft Auto, its logos and the in-game brands are trademarks and copyright of Take-Two Interactive / Rockstar Games.
 This project is not affiliated with or endorsed by them. The MIT license cannot grant rights to their material.

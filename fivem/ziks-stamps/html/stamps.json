@@ -69,7 +69,7 @@
   {
    "file": "svg/11-sheriff.svg",
    "name": "11-sheriff",
-   "title": "LS County Sheriff",
+   "title": "LSSD \u00b7 LS County Sheriff",
    "ink": "#5a4a14"
   },
   {
@@ -167,6 +167,24 @@
    "name": "27-lifeinvader",
    "title": "Lifeinvader",
    "ink": "#c0262d"
+  },
+  {
+   "file": "svg/28-bcso.svg",
+   "name": "28-bcso",
+   "title": "BCSO \u00b7 Blaine County Sheriff",
+   "ink": "#4a3f16"
+  },
+  {
+   "file": "svg/29-gruppe6.svg",
+   "name": "29-gruppe6",
+   "title": "Gruppe Sechs",
+   "ink": "#2f6b2a"
+  },
+  {
+   "file": "svg/30-bobcat.svg",
+   "name": "30-bobcat",
+   "title": "Bobcat Security",
+   "ink": "#1f2a6b"
   }
  ],
  "status": [
@@ -376,7 +394,7 @@
   {
    "file": "svg/mini/11-sheriff-mini.svg",
    "name": "11-sheriff-mini",
-   "title": "LS County Sheriff mini",
+   "title": "LSSD \u00b7 LS County Sheriff mini",
    "ink": "#5a4a14"
   },
   {
@@ -474,6 +492,24 @@
    "name": "27-lifeinvader-mini",
    "title": "Lifeinvader mini",
    "ink": "#c0262d"
+  },
+  {
+   "file": "svg/mini/28-bcso-mini.svg",
+   "name": "28-bcso-mini",
+   "title": "BCSO \u00b7 Blaine County Sheriff mini",
+   "ink": "#4a3f16"
+  },
+  {
+   "file": "svg/mini/29-gruppe6-mini.svg",
+   "name": "29-gruppe6-mini",
+   "title": "Gruppe Sechs mini",
+   "ink": "#2f6b2a"
+  },
+  {
+   "file": "svg/mini/30-bobcat-mini.svg",
+   "name": "30-bobcat-mini",
+   "title": "Bobcat Security mini",
+   "ink": "#1f2a6b"
   }
  ]
 }
