@@ -10,7 +10,7 @@ Everything is pure SVG: recolour it with one CSS variable and give it random rub
 
 **[Live demo](https://fivem.ushpuras.dev/stamps)**: recolour, re-stamp with random wear, and type into the date, officer, case and badge fields.
 
-![Seals](docs/seals.png)
+![All 31 seals](docs/v1.3/seals.png)
 
 ## Contents
 
@@ -47,12 +47,12 @@ WANTED · URGENT · WARRANT ISSUED · SEALED (by order of the court) · CERTIFIE
 
 Most of them have blank **DATE / BY / CASE Nº / BADGE** lines that JS fills in.
 
-![Status stamps](docs/status.png)
+![Status stamps](docs/v1.3/status.png)
 
 ### Mini stamps: `svg/mini/`
 Every seal also comes as a simple ring with a big abbreviation (LSPD, FIB, DMV…), for use where the detailed artwork would turn into a blob.
 
-![Mini](docs/mini.png)
+![Mini](docs/v1.3/mini.png)
 
 `stamps.json` lists every stamp with its file, title, default ink and fields.
 `png/` has transparent PNGs of everything: seals and status stamps both clean and worn, and the minis.
@@ -86,7 +86,7 @@ If you want a fixed stamp with no JS at all, use `<img src="svg/00-lspd.svg" wid
 
 ## Changing the colour
 
-![Recoloured, wear off](docs/recolor.png)
+![Recoloured, wear off](docs/v1.3/recolor.png)
 
 ```css
 .gta-stamp { --stamp-ink: #b11f2b; }   /* inline SVGs only */
@@ -95,7 +95,7 @@ Without CSS, edit the hex code in `color="#……"` and `var(--stamp-ink, #…�
 
 ## Wear
 
-![Random wear and tilt](docs/random-wear.png)
+![Random wear and tilt](docs/v1.3/random-wear.png)
 
 Each stamp has an SVG `<mask>` laid over its ink. White in the mask keeps the ink and black removes it. The mask contains:
 - about 1,350 dots and 60 irregular blots, like paper grain and spots where the ink skipped;
