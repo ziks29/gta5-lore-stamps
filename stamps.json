@@ -1,0 +1,479 @@
+{
+ "seals": [
+  {
+   "file": "svg/00-lspd.svg",
+   "name": "00-lspd",
+   "title": "LSPD",
+   "ink": "#1c3a8c"
+  },
+  {
+   "file": "svg/01-noose.svg",
+   "name": "01-noose",
+   "title": "N.O.O.S.E.",
+   "ink": "#1b2a5e"
+  },
+  {
+   "file": "svg/02-ems.svg",
+   "name": "02-ems",
+   "title": "EMS",
+   "ink": "#b11f2b"
+  },
+  {
+   "file": "svg/03-superior-court.svg",
+   "name": "03-superior-court",
+   "title": "Superior Court",
+   "ink": "#23283a"
+  },
+  {
+   "file": "svg/04-doj.svg",
+   "name": "04-doj",
+   "title": "Department of Justice",
+   "ink": "#1c3a8c"
+  },
+  {
+   "file": "svg/05-governor.svg",
+   "name": "05-governor",
+   "title": "Governor's Office",
+   "ink": "#7d2418"
+  },
+  {
+   "file": "svg/06-notary.svg",
+   "name": "06-notary",
+   "title": "Notary Public",
+   "ink": "#40286e"
+  },
+  {
+   "file": "svg/07-dynasty8.svg",
+   "name": "07-dynasty8",
+   "title": "Dynasty 8 Real Estate",
+   "ink": "#6e5a12"
+  },
+  {
+   "file": "svg/08-maze-bank.svg",
+   "name": "08-maze-bank",
+   "title": "Maze Bank",
+   "ink": "#c3122f"
+  },
+  {
+   "file": "svg/09-fleeca.svg",
+   "name": "09-fleeca",
+   "title": "Fleeca Bank",
+   "ink": "#1e7a34"
+  },
+  {
+   "file": "svg/10-pacific-standard.svg",
+   "name": "10-pacific-standard",
+   "title": "Pacific Standard",
+   "ink": "#47398a"
+  },
+  {
+   "file": "svg/11-sheriff.svg",
+   "name": "11-sheriff",
+   "title": "LS County Sheriff",
+   "ink": "#5a4a14"
+  },
+  {
+   "file": "svg/12-sahp.svg",
+   "name": "12-sahp",
+   "title": "SA Highway Patrol",
+   "ink": "#1f3a6e"
+  },
+  {
+   "file": "svg/13-fib.svg",
+   "name": "13-fib",
+   "title": "FIB",
+   "ink": "#1b2a5e"
+  },
+  {
+   "file": "svg/14-iaa.svg",
+   "name": "14-iaa",
+   "title": "IAA",
+   "ink": "#1a2350"
+  },
+  {
+   "file": "svg/15-lsfd.svg",
+   "name": "15-lsfd",
+   "title": "LS Fire Department",
+   "ink": "#b11f2b"
+  },
+  {
+   "file": "svg/16-park-ranger.svg",
+   "name": "16-park-ranger",
+   "title": "Park Ranger",
+   "ink": "#2f5a2a"
+  },
+  {
+   "file": "svg/17-port-authority.svg",
+   "name": "17-port-authority",
+   "title": "Port Authority",
+   "ink": "#1d3f7a"
+  },
+  {
+   "file": "svg/18-water-power.svg",
+   "name": "18-water-power",
+   "title": "Water & Power",
+   "ink": "#1f5f8b"
+  },
+  {
+   "file": "svg/19-coast-guard.svg",
+   "name": "19-coast-guard",
+   "title": "National Coast Guard",
+   "ink": "#1b2a5e"
+  },
+  {
+   "file": "svg/20-bolingbroke.svg",
+   "name": "20-bolingbroke",
+   "title": "Bolingbroke / SASPA",
+   "ink": "#3a3a3a"
+  },
+  {
+   "file": "svg/21-dmv.svg",
+   "name": "21-dmv",
+   "title": "San Andreas DMV",
+   "ink": "#1d4f9c"
+  },
+  {
+   "file": "svg/22-ls-transit.svg",
+   "name": "22-ls-transit",
+   "title": "Los Santos Transit",
+   "ink": "#9c1c24"
+  },
+  {
+   "file": "svg/23-ls-customs.svg",
+   "name": "23-ls-customs",
+   "title": "Los Santos Customs",
+   "ink": "#2a2d7a"
+  },
+  {
+   "file": "svg/24-union-depository.svg",
+   "name": "24-union-depository",
+   "title": "Union Depository",
+   "ink": "#25306e"
+  },
+  {
+   "file": "svg/25-pillbox.svg",
+   "name": "25-pillbox",
+   "title": "Pillbox Hill Medical",
+   "ink": "#b11f2b"
+  },
+  {
+   "file": "svg/26-weazel-news.svg",
+   "name": "26-weazel-news",
+   "title": "Weazel News",
+   "ink": "#7a1e1e"
+  },
+  {
+   "file": "svg/27-lifeinvader.svg",
+   "name": "27-lifeinvader",
+   "title": "Lifeinvader",
+   "ink": "#c0262d"
+  }
+ ],
+ "status": [
+  {
+   "file": "svg/status/approved.svg",
+   "name": "approved",
+   "title": "Approved",
+   "ink": "#1e7a34",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/denied.svg",
+   "name": "denied",
+   "title": "Denied",
+   "ink": "#b11f2b",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/paid.svg",
+   "name": "paid",
+   "title": "Paid",
+   "ink": "#1e7a34",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/void.svg",
+   "name": "void",
+   "title": "Void",
+   "ink": "#b11f2b",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/copy.svg",
+   "name": "copy",
+   "title": "Copy",
+   "ink": "#3d4b63",
+   "fields": []
+  },
+  {
+   "file": "svg/status/received.svg",
+   "name": "received",
+   "title": "Received",
+   "ink": "#1c3a8c",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/confidential.svg",
+   "name": "confidential",
+   "title": "Confidential",
+   "ink": "#b11f2b",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/top-secret.svg",
+   "name": "top-secret",
+   "title": "Top Secret",
+   "ink": "#b11f2b",
+   "fields": []
+  },
+  {
+   "file": "svg/status/evidence.svg",
+   "name": "evidence",
+   "title": "Evidence",
+   "ink": "#1c3a8c",
+   "fields": [
+    "badge",
+    "case"
+   ]
+  },
+  {
+   "file": "svg/status/case-closed.svg",
+   "name": "case-closed",
+   "title": "Case Closed",
+   "ink": "#23283a",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/wanted.svg",
+   "name": "wanted",
+   "title": "Wanted",
+   "ink": "#7a1e1e",
+   "fields": [
+    "by",
+    "case"
+   ]
+  },
+  {
+   "file": "svg/status/urgent.svg",
+   "name": "urgent",
+   "title": "Urgent",
+   "ink": "#b11f2b",
+   "fields": []
+  },
+  {
+   "file": "svg/status/warrant-issued.svg",
+   "name": "warrant-issued",
+   "title": "Warrant Issued",
+   "ink": "#23283a",
+   "fields": [
+    "by",
+    "date"
+   ]
+  },
+  {
+   "file": "svg/status/sealed-by-court.svg",
+   "name": "sealed-by-court",
+   "title": "Sealed by Court",
+   "ink": "#23283a",
+   "fields": []
+  },
+  {
+   "file": "svg/status/certified-true-copy.svg",
+   "name": "certified-true-copy",
+   "title": "Certified True Copy",
+   "ink": "#40286e",
+   "fields": []
+  }
+ ],
+ "mini": [
+  {
+   "file": "svg/mini/00-lspd-mini.svg",
+   "name": "00-lspd-mini",
+   "title": "LSPD mini",
+   "ink": "#1c3a8c"
+  },
+  {
+   "file": "svg/mini/01-noose-mini.svg",
+   "name": "01-noose-mini",
+   "title": "N.O.O.S.E. mini",
+   "ink": "#1b2a5e"
+  },
+  {
+   "file": "svg/mini/02-ems-mini.svg",
+   "name": "02-ems-mini",
+   "title": "EMS mini",
+   "ink": "#b11f2b"
+  },
+  {
+   "file": "svg/mini/03-superior-court-mini.svg",
+   "name": "03-superior-court-mini",
+   "title": "Superior Court mini",
+   "ink": "#23283a"
+  },
+  {
+   "file": "svg/mini/04-doj-mini.svg",
+   "name": "04-doj-mini",
+   "title": "Department of Justice mini",
+   "ink": "#1c3a8c"
+  },
+  {
+   "file": "svg/mini/05-governor-mini.svg",
+   "name": "05-governor-mini",
+   "title": "Governor's Office mini",
+   "ink": "#7d2418"
+  },
+  {
+   "file": "svg/mini/06-notary-mini.svg",
+   "name": "06-notary-mini",
+   "title": "Notary Public mini",
+   "ink": "#40286e"
+  },
+  {
+   "file": "svg/mini/07-dynasty8-mini.svg",
+   "name": "07-dynasty8-mini",
+   "title": "Dynasty 8 Real Estate mini",
+   "ink": "#6e5a12"
+  },
+  {
+   "file": "svg/mini/08-maze-bank-mini.svg",
+   "name": "08-maze-bank-mini",
+   "title": "Maze Bank mini",
+   "ink": "#c3122f"
+  },
+  {
+   "file": "svg/mini/09-fleeca-mini.svg",
+   "name": "09-fleeca-mini",
+   "title": "Fleeca Bank mini",
+   "ink": "#1e7a34"
+  },
+  {
+   "file": "svg/mini/10-pacific-standard-mini.svg",
+   "name": "10-pacific-standard-mini",
+   "title": "Pacific Standard mini",
+   "ink": "#47398a"
+  },
+  {
+   "file": "svg/mini/11-sheriff-mini.svg",
+   "name": "11-sheriff-mini",
+   "title": "LS County Sheriff mini",
+   "ink": "#5a4a14"
+  },
+  {
+   "file": "svg/mini/12-sahp-mini.svg",
+   "name": "12-sahp-mini",
+   "title": "SA Highway Patrol mini",
+   "ink": "#1f3a6e"
+  },
+  {
+   "file": "svg/mini/13-fib-mini.svg",
+   "name": "13-fib-mini",
+   "title": "FIB mini",
+   "ink": "#1b2a5e"
+  },
+  {
+   "file": "svg/mini/14-iaa-mini.svg",
+   "name": "14-iaa-mini",
+   "title": "IAA mini",
+   "ink": "#1a2350"
+  },
+  {
+   "file": "svg/mini/15-lsfd-mini.svg",
+   "name": "15-lsfd-mini",
+   "title": "LS Fire Department mini",
+   "ink": "#b11f2b"
+  },
+  {
+   "file": "svg/mini/16-park-ranger-mini.svg",
+   "name": "16-park-ranger-mini",
+   "title": "Park Ranger mini",
+   "ink": "#2f5a2a"
+  },
+  {
+   "file": "svg/mini/17-port-authority-mini.svg",
+   "name": "17-port-authority-mini",
+   "title": "Port Authority mini",
+   "ink": "#1d3f7a"
+  },
+  {
+   "file": "svg/mini/18-water-power-mini.svg",
+   "name": "18-water-power-mini",
+   "title": "Water & Power mini",
+   "ink": "#1f5f8b"
+  },
+  {
+   "file": "svg/mini/19-coast-guard-mini.svg",
+   "name": "19-coast-guard-mini",
+   "title": "National Coast Guard mini",
+   "ink": "#1b2a5e"
+  },
+  {
+   "file": "svg/mini/20-bolingbroke-mini.svg",
+   "name": "20-bolingbroke-mini",
+   "title": "Bolingbroke / SASPA mini",
+   "ink": "#3a3a3a"
+  },
+  {
+   "file": "svg/mini/21-dmv-mini.svg",
+   "name": "21-dmv-mini",
+   "title": "San Andreas DMV mini",
+   "ink": "#1d4f9c"
+  },
+  {
+   "file": "svg/mini/22-ls-transit-mini.svg",
+   "name": "22-ls-transit-mini",
+   "title": "Los Santos Transit mini",
+   "ink": "#9c1c24"
+  },
+  {
+   "file": "svg/mini/23-ls-customs-mini.svg",
+   "name": "23-ls-customs-mini",
+   "title": "Los Santos Customs mini",
+   "ink": "#2a2d7a"
+  },
+  {
+   "file": "svg/mini/24-union-depository-mini.svg",
+   "name": "24-union-depository-mini",
+   "title": "Union Depository mini",
+   "ink": "#25306e"
+  },
+  {
+   "file": "svg/mini/25-pillbox-mini.svg",
+   "name": "25-pillbox-mini",
+   "title": "Pillbox Hill Medical mini",
+   "ink": "#b11f2b"
+  },
+  {
+   "file": "svg/mini/26-weazel-news-mini.svg",
+   "name": "26-weazel-news-mini",
+   "title": "Weazel News mini",
+   "ink": "#7a1e1e"
+  },
+  {
+   "file": "svg/mini/27-lifeinvader-mini.svg",
+   "name": "27-lifeinvader-mini",
+   "title": "Lifeinvader mini",
+   "ink": "#c0262d"
+  }
+ ]
+}

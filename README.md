@@ -1,166 +1,146 @@
 # GTA V Lore Stamps
 
-11 lore-friendly rubber stamps and seals for Grand Theft Auto V roleplay documents.
-They are pure SVG, you can recolour them, and each one has wear that can be randomised.
-Made for FiveM / RedM NUI, MDT and document scripts, and for web panels.
+Free lore-friendly rubber stamps and seals for Grand Theft Auto V roleplay documents:
+- **28 department and business seals**
+- **15 status stamps** with live date and officer fields
+- **28 mini stamps** that stay readable below 100 px
+- **a ready FiveM resource** (`ziks-stamps`)
 
-**[Live demo](https://fivem.ushpuras.dev/stamps)**: change the ink colour, switch the wear off, or re-stamp with random wear.
+Everything is pure SVG: recolour it with one CSS variable and give it random rubber-stamp wear.
 
-![All 11 stamps](docs/preview.png)
+**[Live demo](https://fivem.ushpuras.dev/stamps)**: recolour, re-stamp with random wear, and type into the date, officer, case and badge fields.
 
-## Stamps
+![Seals](docs/seals.png)
 
-| File | Stamp | Centre emblem |
-|---|---|---|
-| `00-lspd.svg` | Los Santos Police Department | Seal of the City of Los Santos (beaver, flag, owl, Bigfoot) |
-| `01-noose.svg` | N.O.O.S.E. | Eagle with key from the in-game seal |
-| `02-ems.svg` | Los Santos EMS | Star of Life |
-| `03-superior-court.svg` | Superior Court, County of Los Santos | County seal, "Amor · Patria" |
-| `04-doj.svg` | Department of Justice, State of San Andreas | Scales of justice |
-| `05-governor.svg` | Office of the Governor | San Andreas Republic bear, "The State You're In" |
-| `06-notary.svg` | Notary Public | City of Los Santos shield |
-| `07-dynasty8.svg` | Dynasty 8 Real Estate | Dynasty 8 logo |
-| `08-maze-bank.svg` | Maze Bank of Los Santos | Maze Bank mark |
-| `09-fleeca.svg` | Fleeca Bank | Fleeca wordmark |
-| `10-pacific-standard.svg` | Pacific Standard Public Deposit Bank | 1903 shield with lion and scales |
+## Contents
+
+### Seals: `svg/`
+| # | Stamp | # | Stamp |
+|---|---|---|---|
+| 00 | LSPD (City of Los Santos seal) | 14 | IAA |
+| 01 | N.O.O.S.E. | 15 | LS Fire Department |
+| 02 | Los Santos EMS | 16 | SA Park Ranger |
+| 03 | Superior Court (County seal) | 17 | Port Authority of Los Santos |
+| 04 | Department of Justice | 18 | LS Department of Water & Power |
+| 05 | Office of the Governor | 19 | National Coast Guard |
+| 06 | Notary Public | 20 | Bolingbroke / SA State Prison Authority |
+| 07 | Dynasty 8 Real Estate | 21 | San Andreas DMV |
+| 08 | Maze Bank | 22 | Los Santos Transit |
+| 09 | Fleeca Bank | 23 | Los Santos Customs |
+| 10 | Pacific Standard | 24 | Union Depository |
+| 11 | LS County Sheriff | 25 | Pillbox Hill Medical Center |
+| 12 | SA Highway Patrol | 26 | Weazel News |
+| 13 | FIB | 27 | Lifeinvader |
+
+The emblems are taken from the actual in-game seals and logos. The mottos are lore too:
+"Obey & Survive", "Amor Patria", "The State You're In" and "Confirming Your Prejudices".
+
+### Status stamps: `svg/status/`
+APPROVED · DENIED · PAID · VOID · COPY · RECEIVED · CONFIDENTIAL · TOP SECRET · EVIDENCE · CASE CLOSED ·
+WANTED · URGENT · WARRANT ISSUED · SEALED (by order of the court) · CERTIFIED (true copy)
+
+Most of them have blank **DATE / BY / CASE Nº / BADGE** lines that JS fills in.
+
+![Status stamps](docs/status.png)
+
+### Mini stamps: `svg/mini/`
+Every seal also comes as a simple ring with a big abbreviation (LSPD, FIB, DMV…), for use where the detailed artwork would turn into a blob.
+
+![Mini](docs/mini.png)
+
+`stamps.json` lists every stamp with its file, title, default ink and fields.
+`png/` has transparent PNGs of everything: seals and status stamps both clean and worn, and the minis.
 
 ## Features
-- **Pure vector.** There are no embedded images and no fonts, because all lettering is converted to paths. Each file is 800×800 with a transparent background and is 45–230 KB.
-- **Lore-based.** The emblems come from the actual in-game seals and logos, and the mottos come from the game: "Obey & Survive", "Amor Patria" and "The State You're In".
-- **One-colour ink.** You can change the ink colour by editing the file or with one CSS variable.
-- **Built-in wear.** Each file has a fixed default rubber-stamp wear, and you can switch it off.
-- **Random wear.** `stamp-wear.js` gives a new pattern on every stamp. A seed number reproduces the same pattern later.
-- **Random tilt.** The script can also tilt the stamp by up to ±8°, like a hand-pressed stamp.
-- **Many copies per page.** The same stamp can appear many times on one page; the script keeps each copy separate.
-- **PNG versions.** `png/` has transparent 1200×1200 PNGs of every stamp, clean and worn, for tools that can't use SVG.
+- **Pure vector.** No embedded images and no fonts are needed, because all lettering is converted to paths.
+- **One-colour ink.** Change it with `--stamp-ink` or by editing the file.
+- **Built-in wear.** Each file has a fixed default rubber-stamp wear, which you can switch off with `--stamp-wear: none`.
+- **Random wear and tilt.** `stamp-wear.js` gives a new pattern on every stamp. Store the seed and the document looks identical when it is reopened.
+- **Live fields.** Date, officer, case number and badge are drawn as vector text, so no font is needed. Latin, Cyrillic and digits are supported.
+- **Many copies per page.** The same stamp can appear many times on one page; each copy gets its own ids.
+- **FiveM resource.** Server export, framework auto-detect (qbx / qb / esx / standalone) and a `/stamps` gallery.
 
-## Quick start
+## Quick start (web or NUI)
 
 ```html
-<!-- simplest: fixed colour + fixed wear -->
-<img src="svg/00-lspd.svg" width="180" alt="LSPD stamp">
+<script src="stamp-wear.js"></script>
+<div id="slot" style="width:200px"></div>
+<script>
+  renderStamp(document.getElementById('slot'), {
+    url: 'svg/status/approved.svg',
+    seed: 1838201,                       // omit for random; store it to reproduce
+    ink: '#1e7a34',                      // optional
+    fields: { date: '17 OCT 2026', by: 'SGT. J. REYES' },
+    rotate: true,                        // random tilt of up to ±8°
+  }).then(({ svg, seed }) => console.log('stamped with seed', seed));
+</script>
 ```
 
-To recolour the stamps or randomise the wear, the SVG has to be **inline** in the page:
-paste the file contents in, or use `inlineStamp()` as shown below.
+If you want a fixed stamp with no JS at all, use `<img src="svg/00-lspd.svg" width="180">`.
 
 ## Changing the colour
 
 ![Recoloured, wear off](docs/recolor.png)
 
 ```css
-.gta-stamp { --stamp-ink: #b11f2b; }              /* every stamp red */
-.doc-approved .gta-stamp { --stamp-ink: #1e7a34; } /* or per document */
+.gta-stamp { --stamp-ink: #b11f2b; }   /* inline SVGs only */
 ```
-
-Without CSS, open the `.svg` in a text editor and change the hex code in `color="#……"` and `var(--stamp-ink, #……)`.
-In Inkscape or Illustrator, select all and set one fill colour.
-
-Default inks:
-
-| Stamp | Ink |
-|---|---|
-| LSPD, DOJ | `#1c3a8c` |
-| NOOSE | `#1b2a5e` |
-| EMS | `#b11f2b` |
-| Court | `#23283a` |
-| Governor | `#7d2418` |
-| Notary | `#40286e` |
-| Dynasty 8 | `#6e5a12` |
-| Maze | `#c3122f` |
-| Fleeca | `#1e7a34` |
-| Pacific | `#47398a` |
+Without CSS, edit the hex code in `color="#……"` and `var(--stamp-ink, #……)` in the file, or set one fill colour in Inkscape or Illustrator.
 
 ## Wear
 
-![Same stamp, random wear and tilt](docs/random-wear.png)
+![Random wear and tilt](docs/random-wear.png)
 
-### How it works
-Each stamp has an SVG `<mask>` laid over all of its ink. White in the mask keeps the ink and black removes it. The mask contains:
-- about 1,350 tiny dots and 60 irregular blots, which look like paper grain and spots where the ink skipped;
-- one "dry" area with denser gaps, where the stamp lifted unevenly;
+Each stamp has an SVG `<mask>` laid over its ink. White in the mask keeps the ink and black removes it. The mask contains:
+- about 1,350 dots and 60 irregular blots, like paper grain and spots where the ink skipped;
+- a "dry" area with denser gaps;
 - 6 thin scratches;
-- 6 large, very faint patches that lighten the ink slightly, like uneven pressure.
+- 6 very faint patches that lighten the ink slightly, like uneven pressure.
 
-It is all vector shapes, with no filters, so it renders the same in every browser and in CEF.
+It uses no filters, so it renders the same in every browser and in CEF.
 
-### Switching the wear off
-```css
-.gta-stamp { --stamp-wear: none; }
-```
-In the file itself: remove `mask="url(#…-wear)"` and the `style="mask:…"` on the inner `<g>`.
+## JS API (`stamp-wear.js`)
 
-### Random wear (`stamp-wear.js`)
-```html
-<script src="stamp-wear.js"></script>
-<script>
-  // new wear + random tilt on every inline stamp
-  document.querySelectorAll('.gta-stamp').forEach(svg => stampWear(svg, { rotate: true }));
+| Function | Description |
+|---|---|
+| `renderStamp(container, { url \| name+base, seed, ink, fields, rotate, density, wear })` | Fetch the SVG, inline it, then apply ink, wear and fields. Returns `Promise<{ svg, seed }>`. Falls back to `<img>` if the fetch fails. |
+| `stampWear(svg, { seed, density, dry, scratches, rotate })` | New wear on an inline SVG. Returns the seed it used. |
+| `stampFields(svg, { date, by, case, badge })` | Fill the blank lines on status stamps. Long text shrinks to fit. |
+| `inlineStamp(img)` | Swap an `<img src="x.svg">` for inline SVG. |
 
-  // reproducible: store the seed with the document
-  const seed = stampWear(svg);      // random pattern, returns the seed it used
-  stampWear(svg, { seed });         // later: exactly the same pattern
+Wear options:
+- `density`: 0.3 is almost clean, 1 is the default, 2 is very worn.
+- `dry`: strength of the faded area.
+- `scratches`: number of thin scratches (default 6).
+- `rotate`: `true` for a random tilt, or a number of degrees.
 
-  // works with <img> too: it is converted to inline SVG first
-  inlineStamp(document.querySelector('img.stamp')).then(svg => stampWear(svg, { density: 1.3 }));
-</script>
-```
+## FiveM resource (`fivem/ziks-stamps`)
 
-| Option | Default | Description |
-|---|---|---|
-| `seed` | random | number or string; the same seed gives the same wear |
-| `density` | `1` | `0.3` is almost clean, `2` is very worn |
-| `dry` | `1` | strength of the faded patch; its position is random |
-| `scratches` | `6` | number of thin scratches |
-| `rotate` | off | `true` for a random ±8° tilt, or a number of degrees |
+![NUI gallery](docs/nui.png)
 
-## FiveM NUI example
-
-`fxmanifest.lua`
 ```lua
-ui_page 'html/index.html'
-files { 'html/index.html', 'html/stamp-wear.js', 'html/stamps/*.svg' }
+-- server: create stamp data; date, officer and badge are filled from the framework
+local stamp = exports['ziks-stamps']:CreateStamp(source, 'evidence', { fields = { case = 'LS-24-0815' } })
+-- save `stamp` with your document, then send it to your NUI:
+```
+```js
+renderStamp(slot, { url: 'https://cfx-nui-ziks-stamps/html/' + stamp.file,
+                    seed: stamp.seed, ink: stamp.ink, fields: stamp.fields });
 ```
 
-`client.lua`
-```lua
--- stamp a document; save the seed in your DB so the document looks the same when reopened
-RegisterCommand('stamp', function(_, args)
-    SendNUIMessage({ action = 'stamp', stamp = args[1] or '00-lspd', seed = tonumber(args[2]) })
-    SetNuiFocus(true, true)
-end)
-```
-
-`html/index.html`
-```html
-<div id="doc"></div>
-<script src="stamp-wear.js"></script>
-<script>
-window.addEventListener('message', async ({ data }) => {
-  if (data.action !== 'stamp') return;
-  const img = new Image(); img.src = `stamps/${data.stamp}.svg`; img.width = 160;
-  document.getElementById('doc').appendChild(img);
-  const svg = await inlineStamp(img);
-  const seed = stampWear(svg, { seed: data.seed ?? undefined, rotate: true });
-  svg.style.cssText += 'position:absolute;right:40px;bottom:40px;mix-blend-mode:multiply;opacity:.9';
-  fetch(`https://${GetParentResourceName()}/stamped`, { method: 'POST', body: JSON.stringify({ seed }) });
-});
-</script>
-```
-
-Tip: `mix-blend-mode: multiply` with opacity around 0.9 makes the stamp look printed onto the paper.
+Install: copy `fivem/ziks-stamps` into `resources`, then add `ensure ziks-stamps` to `server.cfg`. In game, `/stamps` opens the gallery.
+There is also a ready zip on the [Releases](https://github.com/ziks29/gta5-lore-stamps/releases) page.
+Full docs: [fivem/ziks-stamps/README.md](fivem/ziks-stamps/README.md).
 
 ## License
 
 [MIT](LICENSE) © 2026 [ziks](https://github.com/ziks29).
 
-You can use these stamps in **free and paid** scripts, servers and assets, and you can modify and resell them as part of your work.
-The one condition is that you **keep the copyright and license notice**:
-- include the `LICENSE` file, or the notice line, in your resource;
-- the notice is also inside each SVG and in `stamp-wear.js`, so leave those comments in place.
+You can use the stamps in **free and paid** scripts, servers and assets, and you can modify and resell them as part of your work.
+The one condition is that you keep the copyright and license notice: it is in `LICENSE`, inside every SVG and at the top of `stamp-wear.js`.
 
-A visible credit in your script's README is appreciated:
+A visible credit is appreciated:
 `Stamps: GTA V Lore Stamps by ziks — github.com/ziks29/gta5-lore-stamps`
 
-Grand Theft Auto logos and brands belong to Rockstar Games / Take-Two Interactive, and the MIT license does not cover them.
-See [NOTICE.md](NOTICE.md) for details and third-party credits. This is an unofficial fan project.
+Grand Theft Auto names and logos belong to Rockstar Games / Take-Two Interactive, and the MIT license does not cover them.
+See [NOTICE.md](NOTICE.md). This is an unofficial fan project.

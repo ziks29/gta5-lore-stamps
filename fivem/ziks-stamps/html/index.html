@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>ziks-stamps</title>
+<!-- GTA V Lore Stamps by ziks (github.com/ziks29) · MIT License -->
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:100%;height:100%;background:transparent;font:500 13px/1.35 system-ui,'Segoe UI',sans-serif;color:#e8e8ea;overflow:hidden;user-select:none}
+#app{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:#0006}
+#app.on{display:flex}
+.win{width:min(1120px,94vw);height:min(700px,90vh);display:grid;grid-template-columns:260px 1fr 230px;background:#0b0b0c;border:1px solid #232327;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px #000a}
+.col{padding:14px;display:flex;flex-direction:column;gap:10px;min-height:0}
+.list{background:#111113;border-right:1px solid #232327}
+.side{background:#111113;border-left:1px solid #232327}
+h1{font-size:13px;letter-spacing:.14em;color:#fff}
+h1 span{color:#e5484d}
+.tabs{display:flex;gap:4px}
+.tabs button{flex:1;padding:6px 0;border-radius:8px;border:1px solid #2a2a2f;background:#16161a;color:#a1a1aa;cursor:pointer;font:inherit}
+.tabs button.on{background:#e5484d;border-color:#e5484d;color:#fff}
+input[type=text]{width:100%;padding:7px 9px;border-radius:8px;border:1px solid #2a2a2f;background:#16161a;color:#e8e8ea;font:inherit;outline:none}
+input[type=text]:focus{border-color:#e5484d}
+.items{flex:1;overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:6px;align-content:start;padding-right:2px}
+.items::-webkit-scrollbar{width:6px}.items::-webkit-scrollbar-thumb{background:#2a2a2f;border-radius:3px}
+.it{background:#16161a;border:1px solid #232327;border-radius:10px;padding:6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px}
+.it:hover{border-color:#3a3a40}.it.on{border-color:#e5484d}
+.it img{width:100%;aspect-ratio:1;object-fit:contain;filter:brightness(1.6) saturate(.9)}
+.it span{font-size:11px;color:#a1a1aa;text-align:center}
+.stage{background:#18181b;display:flex;align-items:center;justify-content:center;padding:22px}
+.paper{position:relative;height:100%;aspect-ratio:1/1.32;background:#f4efe3;border-radius:4px;box-shadow:0 8px 30px #0008;overflow:hidden;color:#3a352a;padding:7% 8%}
+.paper h2{font:700 15px/1.2 Georgia,serif;letter-spacing:.12em;text-align:center;margin-bottom:6%}
+.paper .ln{height:1px;background:#c9c1ae;margin:5.2% 0}
+.paper .ln.s{width:62%}
+.drop{position:absolute;width:40%;mix-blend-mode:multiply;opacity:.92;pointer-events:none}
+.drop.wide{width:52%}
+.drop.anim{animation:press .28s cubic-bezier(.2,.8,.3,1.2)}
+@keyframes press{0%{transform:scale(1.35) rotate(var(--r));opacity:0}60%{opacity:.95}100%{transform:scale(1) rotate(var(--r))}}
+label.f{display:flex;flex-direction:column;gap:4px;color:#a1a1aa;font-size:12px}
+.row{display:flex;align-items:center;gap:8px}
+input[type=color]{width:34px;height:28px;border:1px solid #2a2a2f;border-radius:6px;background:#16161a;padding:2px}
+.btn{padding:10px;border-radius:10px;border:0;background:#e5484d;color:#fff;font:600 13px system-ui;cursor:pointer}
+.btn.g{background:#16161a;border:1px solid #2a2a2f;color:#e8e8ea}
+.btn:active{transform:scale(.98)}
+.meta{font-size:11px;color:#71717a;word-break:break-all}
+.sp{flex:1}
+kbd{background:#16161a;border:1px solid #2a2a2f;border-radius:4px;padding:0 4px;font-size:11px}
+</style></head><body>
+<div id="app"><div class="win">
+  <div class="col list">
+    <h1>ZIKS<span>·</span>STAMPS</h1>
+    <div class="tabs"><button data-t="seals" class="on">Seals</button><button data-t="status">Status</button><button data-t="mini">Mini</button></div>
+    <input type="text" id="q" placeholder="Search…">
+    <div class="items" id="items"></div>
+  </div>
+  <div class="stage"><div class="paper" id="paper">
+    <h2>SAMPLE DOCUMENT</h2>
+    <div class="ln"></div><div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln"></div><div class="ln s"></div>
+  </div></div>
+  <div class="col side">
+    <label class="f">Ink<div class="row"><input type="color" id="ink"><label class="row"><input type="checkbox" id="own" checked> default</label></div></label>
+    <label class="f">Case Nº (status stamps)<input type="text" id="case" maxlength="24" placeholder="LS-24-0815"></label>
+    <div class="meta" id="meta">Pick a stamp, then press Stamp. Date, name and badge come from your character.</div>
+    <div class="sp"></div>
+    <button class="btn" id="go">Stamp</button>
+    <button class="btn g" id="clear">Clear paper</button>
+    <button class="btn g" id="close">Close <kbd>Esc</kbd></button>
+  </div>
+</div></div>
+<script src="stamp-wear.js"></script>
+<script src="app.js"></script>
+</body></html>
